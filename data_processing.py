@@ -1,4 +1,12 @@
 import pandas as pd
+import subprocess 
+
+subprocess.call(
+    ["wget", "http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip"]
+)
+subprocess.call(
+    ["unzip", "trainingandtestdata.zip"]
+)
 
 # Reading in sentiment140 dataset
 df = pd.read_csv("training.1600000.processed.noemoticon.csv",
